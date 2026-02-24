@@ -1,0 +1,39 @@
+/* Generelt */
+body {
+  background-color: #fffdf8;
+}
+main {
+  margin: 1em 4em;
+}
+h1,
+h2,
+h3,
+p {
+  color: #494949;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a,
+h2 {
+  text-decoration: none;
+  color: #494949;
+  font-weight: 400;
+  font-size: medium;
+}
+
+/* Forside */
+.categories_grid1_1_1_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 2em;
+}
+.card_categories {
+  width: 150px;
+  border: 2px solid #494949;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  h2 {
+    place-self: center;
+  }
+}
