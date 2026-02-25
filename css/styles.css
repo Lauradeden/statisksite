@@ -95,7 +95,7 @@ h2 {
   text-decoration: line-through;
   color: #7d7b7b;
 }
-.productlist article article button {
+.productlist article button {
   margin-top: auto;
 }
 .productlist article {
@@ -114,4 +114,40 @@ h2 {
 .productlist article a {
   color: #494949;
   font-size: 1rem;
+}
+
+/* Product */
+
+.productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.productContainer figure::before {
+  content: "U D S A L G !";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.productDetails {
+  .productName {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  .buyBtn {
+    border-radius: 8px;
+    border: 2px solid #494949;
+    padding: 0.8rem 2rem;
+    margin-top: 1em;
+  }
+}
+span.bold {
+  font-weight: 700;
+}
+.formGroup select.size-select {
+  border-radius: 8px;
+  border: 2px solid #494949;
+  option {
+    margin: 1em;
+  }
 }
