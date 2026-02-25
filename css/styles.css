@@ -3,7 +3,8 @@ body {
   background-color: #fffdf8;
 }
 main {
-  margin: 1em 4em;
+  padding: 1em 4em;
+  align-content: space-between;
 }
 h1,
 h2,
@@ -36,4 +37,81 @@ h2 {
   h2 {
     place-self: center;
   }
+}
+
+/* Productlist */
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+.productlist h1 {
+  grid-column: 1/-1;
+}
+.productlist article {
+  border-radius: 8px;
+  border: 2px solid #494949;
+  padding: 1rem;
+  img {
+    width: 100%;
+  }
+  h3 {
+    font-size: 1rem;
+    flex-grow: 3;
+  }
+  .subtitle {
+    color: #494949;
+  }
+}
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+.productlist article > * {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.productlist article.soldout img {
+  opacity: 0.5;
+}
+.productlist article.soldout::before {
+  content: "Sold Out";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.productlist article .sale {
+  display: none;
+}
+.productlist article.onSale .sale {
+  display: flex;
+  justify-content: space-between;
+}
+.sale > p {
+  margin-bottom: 0;
+}
+.productlist article.onSale .price span {
+  text-decoration: line-through;
+  color: #7d7b7b;
+}
+.productlist article article button {
+  margin-top: auto;
+}
+.productlist article {
+  margin-top: 1rem;
+}
+.sale p:last-child {
+  background-color: red;
+  padding: 0.2rem;
+  color: white;
+}
+.productlist article.product_card {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 6;
+}
+.productlist article a {
+  color: #494949;
+  font-size: 1rem;
 }
