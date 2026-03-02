@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/product.js" defer></script>
     <title>Forside</title>
   </head>
   <body>
@@ -20,31 +21,7 @@
         </ul>
       </nav>
     </header>
-    <main class="productContainer">
-      <figure>
-        <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="Produktbillede" class="productImage" />
-        <span class="saleLabel"></span>
-      </figure>
-      <section class="productDetails">
-        <h2 class="productName">Yoga Pants</h2>
-        <div class="productInfo">
-          <p class="articleType"><span class="bold">Type: </span> Pants</p>
-          <p class="productCategory"><span class="bold">Category: </span> Spring</p>
-          <p class="productPrice"><span class="bold">Price: </span> 399,-</p>
-          <form action="sizeChoose">
-            <div class="formGroup">
-              <select name="size" id="size-select" required>
-                <option value="">Choose a size</option>
-                <option value="small">S</option>
-                <option value="medium">M</option>
-                <option value="large">L</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <button class="buyBtn">Buy Now</button>
-      </section>
-    </main>
+    <main id="productContainer"></main>
     <footer>
       <p>&#169; Laura von Deden</p>
     </footer>

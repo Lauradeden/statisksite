@@ -21,7 +21,7 @@ function showProducts(productsArr) {
         <p>Now DKK <span>${Math.round(product.price * (1 - product.discount / 100))}</span>,-</p>
         <p><span>${product.discount}</span>%</p>
     </div>
-    <a href="product.html">Read More</a>
+    <a href="product.html?id=${product.id}">Read More</a>
 </article>`;
   });
 }
