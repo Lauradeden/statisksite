@@ -1,6 +1,11 @@
 const productListContainer = document.querySelector("#productlist");
+// console.log("Product list");
+const params = new URLSearchParams(window.location.search);
+const season = params.get("season");
 
-fetch("https://kea-alt-del.dk/t7/api/products")
+console.log("SEASON", season);
+
+fetch(`https://kea-alt-del.dk/t7/api//products?season=${season}`)
   .then((res) => res.json())
   .then((data) => {
     showProducts(data);
