@@ -11,7 +11,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
         <span class="saleLabel"></span>
       </figure>
       <section class="productDetails">
-        <h2 class="productName">${data.productdisplayname}</h2>
+        <h3 class="productName">${data.productdisplayname}</h3>
         <div class="productInfo">
           <p class="articleType"><span class="bold">Type: </span> ${data.articletype}</p>
           <p class="productCategory"><span class="bold">Category: </span> ${data.category}</p>

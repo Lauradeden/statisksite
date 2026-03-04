@@ -14,6 +14,8 @@ fetch(`https://kea-alt-del.dk/t7/api//products?season=${season}`)
 function showProducts(productsArr) {
   console.log("productsArr", productsArr);
   productListContainer.innerHTML = "";
+  productListContainer.innerHTML += `<h2>${season}</h>`;
+
   productsArr.forEach((product) => {
     console.log("product", product.id);
 
