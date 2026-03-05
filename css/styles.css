@@ -221,3 +221,6 @@ span.bold {
   padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+.product.soldout button {
+  display: none;
+}
