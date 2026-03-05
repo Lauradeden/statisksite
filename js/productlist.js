@@ -17,9 +17,7 @@ function showProducts(productsArr) {
   productListContainer.innerHTML += `<h2>${season}</h>`;
 
   productsArr.forEach((product) => {
-    console.log("product", product.id);
-
-    productListContainer.innerHTML += `<article class="product_card onSale">
+    productListContainer.innerHTML += `<article class="product_card ${product.soldout ? "soldout" : ""} ${product.discount ? "onSale" : ""}">
     <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="product image">
     <h3>${product.productdisplayname}</h3>
     <p class="subtitle">${product.subcategory}</p>

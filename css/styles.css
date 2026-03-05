@@ -113,6 +113,7 @@ h1 span {
   background-color: black;
   color: white;
   padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .productlist article .sale {
   display: none;
@@ -153,7 +154,7 @@ h1 span {
 
 /* Product */
 
-#productContainer {
+.product {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -186,4 +187,37 @@ span.bold {
   option {
     margin: 1em;
   }
+}
+
+.sale {
+  display: none;
+}
+
+.product.onSale .sale {
+  display: flex;
+  justify-content: space-between;
+}
+.product.onSale .productPrice {
+  text-decoration: line-through;
+  color: #7d7b7b;
+}
+.product.soldout img {
+  opacity: 0.5;
+}
+
+.product.onSale figure::before {
+  content: "S A L E !";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product.soldout figure::before {
+  content: "SOLD OUT ";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
