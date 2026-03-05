@@ -5,17 +5,20 @@ const productContainer = document.querySelector("#productContainer");
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
-    productContainer.innerHTML = `
-      <figure>
+    productContainer.innerHTML = `<article class="product ${data.soldout ? "soldout" : ""} ${data.discount ? "onSale" : ""}"> 
+    <figure>
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="Produktbillede" class="productImage" />
-        <span class="saleLabel"></span>
       </figure>
       <section class="productDetails">
         <h3 class="productName">${data.productdisplayname}</h3>
         <div class="productInfo">
           <p class="articleType"><span class="bold">Type: </span> ${data.articletype}</p>
           <p class="productCategory"><span class="bold">Category: </span> ${data.category}</p>
-          <p class="productPrice"><span class="bold">Price: </span> ${data.price}</p>
+          <p class="productPrice"><span class="bold">Price: </span> ${data.price}</p>   
+         <div class="sale">
+        <p>Now DKK <span>${Math.round(data.price * (1 - data.discount / 100))}</span>,-</p>
+        <p><span>${data.discount}</span>%</p>
+    </div>
           <form action="sizeChoose">
             <div class="formGroup">
               <select name="size" id="size-select" required>
@@ -29,5 +32,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
         </div>
         <button class="buyBtn">Buy Now</button>
       </section>
+      </article>
       `;
   });
